@@ -1,0 +1,7 @@
+{
+  "name": "wall",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
