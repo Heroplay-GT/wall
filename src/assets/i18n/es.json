@@ -1,0 +1,29 @@
+{
+  "LOGIN": {
+    "TITLE": "Iniciar Sesión",
+    "EMAIL": "Correo Electrónico",
+    "PASSWORD": "Contraseña",
+    "BUTTON": "Ingresar",
+    "NO_ACCOUNT": "¿No tienes una cuenta?",
+    "REGISTER": "Regístrate aquí"
+  },
+  "REGISTER": {
+    "TITLE": "Registro",
+    "NAME": "Nombre",
+    "LASTNAME": "Apellido",
+    "EMAIL": "Correo Electrónico",
+    "PASSWORD": "Contraseña",
+    "CONFIRM_PASSWORD": "Confirmar Contraseña",
+    "BUTTON": "Crear Cuenta",
+    "HAVE_ACCOUNT": "¿Ya tienes una cuenta?",
+    "LOGIN": "Inicia sesión aquí"
+  },
+  "HOME": {
+    "TITLE": "Mis Fondos de Pantalla",
+    "WELCOME": "Bienvenido, {{name}}"
+  },
+  "UPDATE_USER": {
+    "TITLE": "Actualizar Información",
+    "BUTTON": "Guardar Cambios"
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "LOGIN": {
+      "TITLE": "Login",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "BUTTON": "Sign In",
+      "NO_ACCOUNT": "Don't have an account?",
+      "REGISTER": "Register here"
+    },
+    "REGISTER": {
+      "TITLE": "Register",
+      "NAME": "Full Name",
+      "LASTNAME": "Last Name",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "CONFIRM_PASSWORD": "Confirm Password",
+      "BUTTON": "Sign Up",
+      "HAVE_ACCOUNT": "Already have an account?",
+      "LOGIN": "Login here"
+    },
+    "HOME": {
+      "TITLE": "My Wallpapers",
+      "WELCOME": "Welcome, {{name}}"
+    },
+    "UPDATE_USER": {
+      "TITLE": "Update Information",
+      "BUTTON": "Save Changes"
+    }
+  }
+  
