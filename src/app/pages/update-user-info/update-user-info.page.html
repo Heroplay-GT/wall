@@ -1,0 +1,45 @@
+<ion-content>
+
+  <!-- Botón casita flotante -->
+  <ion-button fill="clear" class="home-btn" routerLink="/home">
+    <ion-icon name="home-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+
+  <!-- Contenedor centrado del formulario -->
+  <div class="form-container">
+    <form [formGroup]="profileForm" (ngSubmit)="onUpdate()">
+
+      <!-- Nombre -->
+      <ion-item lines="none">
+        <ion-label position="stacked">{{ 'REGISTER.NAME' | translate }}</ion-label>
+        <ion-input formControlName="name" type="text"></ion-input>
+      </ion-item>
+
+      <!-- Apellido -->
+      <ion-item lines="none">
+        <ion-label position="stacked">{{ 'REGISTER.LASTNAME' | translate }}</ion-label>
+        <ion-input formControlName="lastName" type="text"></ion-input>
+      </ion-item>
+
+      <!-- Email (editable ahora) -->
+      <ion-item lines="none">
+        <ion-label position="stacked">{{ 'REGISTER.EMAIL' | translate }}</ion-label>
+        <ion-input formControlName="email" type="email"></ion-input>
+      </ion-item>
+
+      <!-- Toggle para cambiar idioma -->
+      <div class="extra-options">
+        <app-toggle-translate></app-toggle-translate>
+      </div>
+
+      <!-- Mensajes -->
+      <ion-text color="success" *ngIf="successMsg">{{ successMsg }}</ion-text>
+      <ion-text color="danger" *ngIf="errorMsg">{{ errorMsg }}</ion-text>
+
+      <!-- Botón actualizar -->
+      <ion-button expand="block" type="submit" [disabled]="profileForm.invalid" color="primary">
+        {{ 'UPDATE_USER.BUTTON' | translate }}
+      </ion-button>
+    </form>
+  </div>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-content>
+  <div class="login-card">
+    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+      <h2 class="title">{{ 'REGISTER.TITLE' | translate }}</h2>
+
+      <ion-item>
+        <ion-label position="floating">{{ 'REGISTER.NAME' | translate }}</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">{{ 'REGISTER.LASTNAME' | translate }}</ion-label>
+        <ion-input type="text" formControlName="lastname"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">{{ 'REGISTER.EMAIL' | translate }}</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">{{ 'REGISTER.PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">{{ 'REGISTER.CONFIRM_PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" formControlName="confirmPassword"></ion-input>
+      </ion-item>
+
+      <div class="extra-options">
+        <app-link 
+          [text]="'REGISTER.LOGIN' | translate" 
+          [routerLink]="['/login']">
+        </app-link>
+        <app-toggle-translate></app-toggle-translate>
+      </div>
+
+      <app-button 
+        [text]="'REGISTER.BUTTON' | translate" 
+        type="submit" 
+        [disabled]="registerForm.invalid">
+      </app-button>
+
+      <div *ngIf="errorMsg" class="error-msg">{{ errorMsg }}</div>
+    </form>
+  </div>
+</ion-content>

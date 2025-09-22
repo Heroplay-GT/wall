@@ -1,0 +1,44 @@
+<ion-header translucent="true">
+  <ion-toolbar class="header-toolbar">
+    <ion-title class="header-title">Wall</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-bg">
+
+  <!-- FAB menú flotante -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button class="fab-main">
+      <ion-icon name="close"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="onProfileClick()" class="fab-option">
+        <ion-icon name="person"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="onAddWallpaperClick()" class="fab-option">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button (click)="onLogoutClick()" class="fab-option">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <!-- Mensaje de éxito -->
+  <div *ngIf="showSuccess" class="success-msg">
+    <ion-chip color="success">
+      <ion-label>✅ Subida exitosa</ion-label>
+    </ion-chip>
+  </div>
+
+  <!-- Lista de wallpapers -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let wall of wallpapers">
+        <ion-card class="wall-card">
+          <img [src]="wall" alt="Wallpaper" />
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
